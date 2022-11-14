@@ -17,8 +17,8 @@ var rand = Math.floor(Math.random() * 10000 + 54)
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'election.blockchain@gmail.com',
-        pass: 'ajkprvy7',
+        user: 'rahulvarshney8816@gmail.com',
+        pass: 'opfcycdqubbrngnn',
     },
 })
 
@@ -87,9 +87,9 @@ router.post('/otpverify', (req, res) => {
     if (otp == rand) {
         var record = { Account_address: account_address, Is_registered: 'Yes' }
         var sql = 'INSERT INTO registered_users SET ?'
-        conn.query(sql, record, function (err2, res2) {
-            if (err2) {
-                throw err2
+        conn.query(sql, record, function (err, res2) {
+            if (err) {
+                console.log(err)
             } else {
                 var sql1 =
                     'Update aadhar_info set Is_registered=? Where Aadharno=?'

@@ -16,7 +16,9 @@ router.post('/login', function (req, res) {
     var sql =
         'SELECT * FROM registration WHERE email_address =? AND password =?'
     db.query(sql, [emailAddress, password], function (err, data, fields) {
-        if (err) throw err
+        if (err) {
+            console.log(err)
+        }
         if (data.length > 0) {
             req.session.loggedinUser = true
             req.session.emailAddress = emailAddress
