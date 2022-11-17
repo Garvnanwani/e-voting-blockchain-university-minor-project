@@ -151,14 +151,14 @@ App = {
             var fetchedStateAdmin;
             phaseEnum = state.toString();
             if (state == 0) {
-                fetchedState = "Registration phase is on , go register yourself to vote !!";
+                fetchedState = "Currently registration phase is going on, so register yourself to vote. If you are already registered then please wait for the voting phase to start.";
                 fetchedStateAdmin = "Registration";
                 $('#test').hide()
             } else if (state == 1) {
-                fetchedState = "Voting is now live !!!";
+                fetchedState = "Voting is now live.... Go Vote for your favourite candidate!";
                 fetchedStateAdmin = "Voting";
             } else {
-                fetchedState = "Voting is now over !!!";
+                fetchedState = "Voting is now over!";
                 fetchedStateAdmin = "Election over";
                 $('#test').hide()
             }

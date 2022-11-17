@@ -36,7 +36,6 @@ router.post('/register', function (req, res, next) {
         } else {
             // save users data into database
             var sql = 'INSERT INTO registration SET ?'
-            console.log(sql)
             db.query(sql, inputData, function (err, data) {
                 if (err) {
                     console.log(err)

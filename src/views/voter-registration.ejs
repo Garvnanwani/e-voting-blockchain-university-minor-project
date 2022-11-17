@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags -->
     <title>Best Actor Contest</title>
 
@@ -16,15 +16,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <!-- CSS Files -->
     <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+    <style></style>
 </head>
 
 <body>
     <!-- additional -->
     <div class="wrapper ">
-        <div class="sidebar" data-color="azure" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="#000000" data-background-color="black" data-image="./assets/img/sidebar-1.jpg">
           <!--
             Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
-    
+
             Tip 2: you can also add an image using data-image tag
         -->
             <div class="sidebar-wrapper">
@@ -32,7 +33,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="/userInfo">
                     <i class="material-icons">content_paste</i>
-                    <p>Information</p>
+                    <p>Welcome</p>
                   </a>
                 </li>
                 <li class="nav-item active">
@@ -53,12 +54,6 @@
                     <p>Result</p>
                   </a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="/changePhase">
-                    <i class="material-icons">content_paste</i>
-                    <p>Change Phase</p>
-                  </a>
-                </li> -->
                 <li class="nav-item ">
                   <a class="nav-link" href="/logout">
                     <i class="material-icons">logout</i>
@@ -115,7 +110,7 @@
                           </div>
                         </div>
                         <br>
-                        <button type="submit"  class="btn btn-info btn-block mb-4">Register</button>
+                        <button type="submit" style="background-color:#1f2f1f"  class="btn btn-block mb-4">Register</button>
                         </div>
                       </form>
                     </div>
@@ -125,29 +120,16 @@
                       <div>
                         <%=(typeof alertMsg!='undefined')? alertMsg:''%>
                         </div>
-                      <!-- <span>
-                        <b> Candidate </b> has been registered Successfully....!
-                      </span> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-    
-          
+
+
           <!-- End Navbar -->
       </div>
       </div>
-  
-      
-      
-      <!-- additional -->
-    
-        
-
-    
-   
-
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- <script src="js/web3.min.js"></script> -->

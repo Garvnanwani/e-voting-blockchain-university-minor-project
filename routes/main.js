@@ -36,12 +36,11 @@ router.post('/registerdata', function (req, res) {
             if (error) {
                 return console.error(error.message)
             }
-            console.log(results)
             if (results.length > 0) {
                 dob = results[0].Dob
                 var email = results[0].Email
-                age = getAge(dob)
-                is_registerd = results[0].Is_registered
+                var age = 2022 - dob.slice(6);
+                is_registerd = results[0].is_registerd
                 if (is_registerd != 'YES') {
                     if (age >= 18) {
                         var mailOptions = {
@@ -92,13 +91,12 @@ router.post('/otpverify', (req, res) => {
                 console.log(err)
             } else {
                 var sql1 =
-                    'Update aadhar_info set Is_registered=? Where Aadharno=?'
+                    'Update aadhar_info set Is_registerd=? Where Aadharno=?'
                 var record1 = ['YES', data]
                 conn.query(sql1, record1, function (err1, res1) {
                     if (err1) {
                         res.render('voter-registration.ejs')
                     } else {
-                        console.log('1 record updated')
                         var msg = 'You are successfully registered'
                         res.render('voter-registration.ejs', { alertMsg: msg })
                     }
